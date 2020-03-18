@@ -1,7 +1,7 @@
 ## 开始使用
-> git clone https://github.com/goukey/docker-bitwarden.git docker-bitwarden
+> git clone https://github.com/goukey/Bitwarden-docker.git Bitwarden-docker
 
-> cd docker-bitwarden
+> cd Bitwarden-docker
 
 > docker-compose up -d
 

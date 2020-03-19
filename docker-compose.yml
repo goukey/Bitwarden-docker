@@ -11,4 +11,4 @@ services:
       - ./bitwarden/data:/data
       - ./bitwarden/ssl/keys:/ssl
     environment:
-      ROCKET_TLS={certs="/ssl/certs.cert",key="/ssl/key.key"}
+      ROCKET_TLS='{certs="/ssl/certs.pem",key="/ssl/key.pem"}'

@@ -6,7 +6,9 @@ services:
     image: bitwardenrs/server:latest
     restart: always
     ports:
-      - '8080:80'
-      - '8012:3012'
+      - '443:80'
     volumes:
       - ./bitwarden/data:/data
+      - ./bitwarden/ssl/keys:/ssl
+    environment:
+      ROCKET_TLS={certs="/ssl/certs.cert",key="/ssl/key.key"}

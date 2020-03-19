@@ -5,8 +5,6 @@ services:
     container_name: bitwarden
     image: bitwardenrs/server:latest
     restart: always
-    env_file:
-      - config.env
     ports:
       - '8080:80'
       - '8012:3012'

@@ -5,10 +5,10 @@ services:
     container_name: bitwarden
     image: bitwardenrs/server:latest
     restart: always
-    ports:
-      - '443:80'
     volumes:
       - ./bitwarden/data:/data
       - ./bitwarden/ssl/keys:/ssl
-    environment:
-      ROCKET_TLS='{certs="/ssl/certs.pem",key="/ssl/key.pem"}'
+    env_file:
+      - config.env
+    ports:
+      - '443:80'

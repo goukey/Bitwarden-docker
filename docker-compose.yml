@@ -6,8 +6,8 @@ services:
     image: bitwardenrs/server:latest
     restart: always
     volumes:
-      - /bitwarden/data:/data
-      - /etc/certs:/ssl
+      - /data:/bitwarden/data
+      - /ssl:/etc/certs
     env_file:
       - config.env
     ports:

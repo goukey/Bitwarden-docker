@@ -7,7 +7,7 @@ services:
     restart: always
     volumes:
       - ./bitwarden/data:/data
-      - ./bitwarden/ssl/keys:/ssl
+      - ./bitwarden/ssl/keys:/etc/certs
     env_file:
       - config.env
     ports:

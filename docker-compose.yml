@@ -1,14 +1,14 @@
-version: '3'
+version: "3.7"
 
 services:
   bitwarden:
     container_name: bitwarden
     image: bitwardenrs/server:latest
-    restart: always
     volumes:
       - ./bitwarden/data:/data
       - /etc/certs:/ssl
     env_file:
       - config.env
     ports:
-      - '444:80'
+      - "444:80"
+    restart: always
